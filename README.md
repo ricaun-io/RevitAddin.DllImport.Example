@@ -28,7 +28,7 @@ The output of the `CPlusPlus` project was changed in all configurations to the `
 
 To make work in Revit the `CPlusPlus` project need to be configured to `.NET Framework` and `.NET Core` configurations with platform `x64`.
 
-![Net-Framework](assets/Net-Framework.png)![Net-Core](assets/Net-Core.png)
+![Net-Framework](assets/Net-Framework.png) ![Net-Core](assets/Net-Core.PNG)
 
 ## Installation
 
