@@ -13,20 +13,14 @@ namespace RevitAddin.DllImport.Example.Revit.Commands
         {
             UIApplication uiapp = commandData.Application;
 
-            var math = MathCreate();
+            var math = new CPlusPlus.Math();
+            Console.WriteLine(math.Add(1, 2));
 
-            Console.WriteLine($"1 + 2 = {MathAdd(math, 1, 2)}");
+            Console.WriteLine($"1 + 2 = {math.Add(1, 2)}");
 
-            System.Windows.MessageBox.Show($"1 + 2 = {MathAdd(math, 1, 2)}");
+            System.Windows.MessageBox.Show($"1 + 2 = {math.Add(1, 2)}");
 
             return Result.Succeeded;
         }
-
-        [DllImport("CPlusPlus.dll")]
-        static extern IntPtr MathCreate();
-
-        [DllImport("CPlusPlus.dll")]
-        static extern int MathAdd(IntPtr math, int a, int b);
-
     }
 }

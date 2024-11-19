@@ -8,9 +8,7 @@
     <LangVersion>latest</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-    <Configurations>
-      Debug 2024; 2024;
-    </Configurations>
+    <Configurations>Debug 2024;2024;Debug 2025;2025</Configurations>
   </PropertyGroup>
 
   <!-- RevitVersion -->
@@ -63,6 +61,12 @@
         <TargetFramework>net48</TargetFramework>
       </PropertyGroup>
     </When>
+    <When Condition="$(Configuration.Contains('2025'))">
+      <PropertyGroup>
+        <RevitVersion>2025</RevitVersion>
+        <TargetFramework>net8.0-windows</TargetFramework>
+      </PropertyGroup>
+    </When>
     <Otherwise>
       <PropertyGroup>
         <RevitVersion>2017</RevitVersion>
@@ -70,6 +74,13 @@
       </PropertyGroup>
     </Otherwise>
   </Choose>
+
+  <!-- Net Core -->
+  <PropertyGroup Condition="!$(TargetFramework.StartsWith('net4'))">
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
 
   <!-- Release -->
   <PropertyGroup Condition="!$(Configuration.Contains('Debug'))">
@@ -97,8 +108,7 @@
 
   <PropertyGroup>
     <PackageId>RevitAddin.DllImport.Example</PackageId>
-    <Version>1.0.0</Version>
-    <ProjectGuid>{DDA3D303-70F8-4AD3-9CBC-655ED3476380}</ProjectGuid>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup>
