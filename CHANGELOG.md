@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Support Revit 2025 - .NET Core
 ### Updated
 - Update configuration in `CPlusPlus` to `Release-Core` and `Debug-Core`.
+- Add `x64` platform in Revit project to make `CPlusPlus` to build with correct with `ricaun.Nuke`.
 
 ## [1.0.0] / 2023-12-26
 - First Release

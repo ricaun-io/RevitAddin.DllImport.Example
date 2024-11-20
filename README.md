@@ -33,6 +33,12 @@ To make work in Revit the `CPlusPlus` project need to be configured to `.NET Fra
 ##### .NET Core
 ![Net-Core](assets/Net-Core.PNG)
 
+### Nuke Automation
+
+To make work with `ricaun.Nuke` the `CPlusPlus` project need to be configured to `2024` and `2025` configurations with platform `x64`, the same configuration as the main project.
+
+![Configuration](assets/Configuration.PNG)
+
 ## Installation
 
 * Download and install [RevitAddin.DllImport.Example.exe](../../releases/latest/download/RevitAddin.DllImport.Example.zip)
